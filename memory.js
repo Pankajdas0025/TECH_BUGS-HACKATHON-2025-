@@ -74,7 +74,7 @@ document.addEventListener("DOMContentLoaded", function() {
                     }, 1000);
                 }
                 counter++;
-                document.querySelector(".score").innerHTML = 'Number of Mapings : ' + counter;
+                document.querySelector(".score").innerHTML = ' MOVES:' + counter;
                 visible1 = false;
             }
         }
