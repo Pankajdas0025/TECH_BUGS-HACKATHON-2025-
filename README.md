@@ -15,7 +15,7 @@ Interactivity: Adding event listeners to respond to user actions, such as clicki
   <table>
     <tr>
       <th>Name:</th>
-         <th>Enrollmet:</th>
+         <th>Enrollment:</th>
          <th>Program:</th>
     </tr>
       <tr>
