@@ -5,10 +5,10 @@
   A memory puzzle game typically presents a grid of cards, each hiding an image or symbol. Players flip two cards at a time, aiming to find matching pairs. The game continues until all pairs are matched. Developing this game involves several key components:
 <br>
     <h2>TEAM MEMBERS</h2>
-    <table>
+    <table border="2">
 
     <tr>
-      <th>Name:</th>
+          <th>Name:</th>
          <th>Enrollment:</th>
          <th>Program:</th>
     </tr>
@@ -33,7 +33,6 @@
           <td>BCA</td>
     </tr> 
   </table>
-  
   
 
 1. User Interface (UI): Designing a visually appealing and intuitive layout using HTML and CSS.
