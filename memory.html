@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html  oncontextmenu="window.alert('Right click operation Not alowed');return false;">
     <head>
         <meta charset="utf-8">
         <title>PUZZLE</title>
@@ -95,7 +95,10 @@
                         ⭐You Have only 40 Moves ! <br> <br>
                         <button style="height: 30px; width: 120px; background-color: rgba(238, 70, 14, 0.793); color: wheat;" onclick=" Displayclose()">Close</button>
                     </div>
-                    <div class="WinDisplay animate__animated animate__fadeInDown " id="Hbox">
+
+
+
+                    <div class="WinDisplay animate__animated animate__fadeInDown " id="Wbox">
                         <br>
                 
                         <center><img src="Images/WON.png" height="250" width="250" alt="wonpic">
@@ -142,6 +145,27 @@ function toggleAudio() {
         button.src="Images/S1.jpg";
     }
 }
+// Disable specific keyboard shortcuts
+document.onkeydown = function(e) {
+  if (e.keyCode == 123) { // Disable F12
+    return false;
+  }
+  if (e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)) { // Disable Ctrl+Shift+I
+    return false;
+  }
+  if (e.ctrlKey && e.shiftKey && e.keyCode == 'C'.charCodeAt(0)) { // Disable Ctrl+Shift+C
+    return false;
+  }
+  if (e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)) { // Disable Ctrl+Shift+J
+    return false;
+  }
+  if (e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)) { // Disable Ctrl+U
+    return false;
+  }
+  if (e.ctrlKey && e.keyCode == 'S'.charCodeAt(0)) { // Disable Ctrl+S
+    return false;
+  }
+};
 
 
         </script>
