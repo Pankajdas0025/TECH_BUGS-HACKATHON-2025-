@@ -3,7 +3,7 @@
     padding: 0;
     margin: 0;
 }
-
+/* Game Body ---------------------------------------------------- */
 .Gbody {
     text-transform: uppercase;
     font-family: 'Righteous', cursive;
@@ -12,32 +12,30 @@
     overflow: hidden;
       background-image: url('Images/HB.jpg');
     background-repeat:no-repeat;
-}.Hbody{
+}/* Home page  Body ---------------------------------------------------- */
+.Hbody{
     background-image: url('Images/HB.jpg');
     background-size: cover;
     overflow: hidden;
     background-repeat:no-repeat;
     
  
-}.Text{
-    /* margin: 5% 20%; */
-    background-color: transparent;
-    backdrop-filter: blur(20px);
-    height: 100vh;
-    width: 100vw;
-    font-style: normal;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}/* Home page  text box which contain name of game ---------------------------------------------------- */
+.Text{
+    /* margin: 10px 102px; */
+    top: 0;
+    background-color:transparent;
+    backdrop-filter: blur(10px);
+    filter: brightness(100%);
+    height: 100%;
+    width: 100%;
     font-weight: bold;
     text-align: center;
-    text-shadow: 2px 2px 2px rgb(135, 110, 105);
 position: absolute;
-z-index: 100000;
-    font-size: 50px;
-  
-}#Gi{
-    height:300px;
-    width:380px;
-}#Pbtn{
+z-index: 100000;  
+}   
+/* Home page  play button  ---------------------------------------------------- */
+#Pbtn{
     width: 220px;
     height: 80px;
     box-shadow: 2px 2px 60px #92d5e8;
@@ -49,6 +47,7 @@ z-index: 100000;
     box-shadow: 2px 2px 60px #0f9cc3;
    
 }
+/* for animation ........................................................ */
 
  #one{
             height: 25px;
@@ -83,7 +82,7 @@ z-index: 100000;
             background-color:rgb(245, 237, 3);
             background-size: cover; 
         }
-
+/* for animation end  ........................................................ */
 .clearfix::before, .clearfix::after {
     content: "";
     clear: both;
@@ -91,48 +90,83 @@ z-index: 100000;
 }
 
 .game-memory {
+    background-color: transparent;
+    backdrop-filter:blur(5px);
     width: 100vw;
     height: 100vh;
-    /* background-image: url('Images/HB.jpg'); */
     background-size: cover;
     overflow: hidden;
-    background-color: transparent;
-    backdrop-filter: blur(5px);
-    background-repeat:no-repeat;
     padding: 5px 0;
-    display: table;
+    display:block;
 }
 .memory-score {
     width:500px;
     height: 523px;
-    /* background-color: red; */
-    background-color: transparent;
+    background-color: transparent; 
+    backdrop-filter:blur(10px);
     display:inline-block;
     position:absolute;
     margin-top: 25px;
     margin-right: 10px;
-}.score{
-    height: 50px;
+}
+/* How to play popup  box.............................................................  */
+.HowTPlay{
+display: none;
+width: 100%;
+height: 100%;
+top: 0;
+position: absolute;
+padding: 25px 35px;
+font-size: 25px;
+color: white;
+font-family: 'Courier New', Courier, monospace;
+background-color: #243a3f;
+text-shadow: 2px 2px 3px black;
+
+}.WinDisplay{
+display:none;    
+width: 100%;
+height: 100%;
+top: 0;
+position: absolute;
+padding: 25px 35px;
+font-size: 25px;
+color: white;
+font-family: 'Courier New', Courier, monospace;
+background-color: #055668;
+text-shadow: 2px 2px 3px black;
+
+}
+.score{
+    height: 40px;
     background-color:transparent;
     font-weight: bolder;
     text-align: center;
     font-size: 35px;
+align-items: center;
+align-content: center;
     color: white;
     text-shadow: 2px 2px 14px black;
     margin-top: 35px;
+
    
 }.back{
     height: 100px;
     width: 100px;
-    margin: 25px 36%;
+    margin: 25px 39%;
     border-radius: 50%;
     box-shadow: 2px 2px 60px #0f9cc3;
+    border: 2px double black;
 }.back:hover{
     box-shadow: 2px 2px 60px #0b1315;
 }#Hbtn{
     height: 50px;
     width: 130px;
-    margin: 2px 33%;
+    margin: 2px 36%;
+    border-radius:100px;
+    border: 2px double black;
+}#Hbtn:hover{
+    box-shadow: 2px 2px 60px #0b1315;
 }
 
 .memory-board {
@@ -144,9 +178,23 @@ z-index: 100000;
     background-color: transparent;
     backdrop-filter: blur(5px);
 }
+/* Replay popup or Game over box ............................................................................ */
+.ReplayNote{
+    width: 100%;
+    display:none;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 25px;
+    background-color:transparent;
+    backdrop-filter: blur(50px);
+}
 .cardsLine {
     width: 100%;
     height: 25%;
+    align-items: center;
+    align-content: center;
 }
 
 .cards {

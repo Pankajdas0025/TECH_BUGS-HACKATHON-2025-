@@ -74,24 +74,37 @@ document.addEventListener("DOMContentLoaded", function() {
                     }, 1000);
                 }
                 counter++;
-                document.querySelector(".score").innerHTML = ' MOVES:' + counter;
+ //alert that you have no moves to play  ..........By: Pankaj kumar das .............               
+                if(counter>40)
+                    {
+            var a=document.getElementById("RNote");
+            a.style.display="block";
+                    }
+                document.querySelector(".score").innerHTML ='MOVES: ' + counter;
                 visible1 = false;
             }
         }
+    
     }
 
-  
+
     function goodCards(numb1, numb2) {
         document.getElementById("card" + numb1).style.opacity = "0";
         document.getElementById("card" + numb2).style.opacity = "0";
         left--;
+
+
+//Final result .................................By:Pankaj Kumar Das ...............
         if (left == 0) {
-            document.querySelector(".memory-board").innerHTML = "<p>=You WIN 🏆 in <span>" + counter + "</span> Maps !<br/><a href='./memory.html'><button class='new-game' onclick='mixArray(cards)'>Play again▶️</button></a></p>";
+           var c=document.querySelector("#Wbox");
+           c.style.display="block";
+           var d=document.querySelector("#Wtittle");
+           d.innerHTML="You solve the puzzle in "+counter+ "Moves !";
             document.querySelector(".memory-score").style.visibility = "hidden";
         }
         stop = false;
     }
-
+//this code is write using CHatgpt ...................................................
     function wrongCards(numb1, numb2) {
         document.getElementById("card" + numb1).style.backgroundImage = "url(./Images/karta.png)";
         document.getElementById("card" + numb1).classList.remove("activeCard");
@@ -190,3 +203,4 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 });
+ 

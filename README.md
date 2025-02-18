@@ -13,6 +13,7 @@
 Interactivity: Adding event listeners to respond to user actions, such as clicking on cards. 
   <h2>TEAM MEMBERS</h2>
   <table>
+
     <tr>
       <th>Name:</th>
          <th>Enrollment:</th>

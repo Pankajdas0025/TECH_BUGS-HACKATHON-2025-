@@ -3,18 +3,19 @@
     <head>
         <meta charset="utf-8">
         <title>PUZZLE</title>
+<!------------------------------- Files link -------------------------- -->
         <link rel='stylesheet' href='style.css'>
-
-         <link
+<!------------------------------- cdn link -------------------------- -->
+        <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
   />
         <link href="https://fonts.googleapis.com/css?family=Righteous&display=swap&subset=latin-ext" rel="stylesheet">
     </head>
 
-    <body class="Gbody animate__animated animate__fadeIn animate__repeat-2">
-        <main class="game-memory animate__animated animate__fadeIn animate__repeat-2">
-            <section class="memo">
+    <body class="Gbody animate__animated animate__fadeIn animate__repeat-1">
+        <main class="game-memory">
+    
                 <div class="memory-board" id="MM">
                    
                     <div class="clearfix cardsLine">
@@ -48,31 +49,102 @@
                         <div id="card18" class="cards"></div>
                         <div id="card19" class="cards"></div>
                     </div>
-                    <!-- <div class="result">xbbbbbbbbbbbx</div> -->
-                   
+                    
+                   <div class="ReplayNote  animate__animated animate__fadeInDown" id="RNote">
+                    <br>
+                    <br>
+                    <img src="Images/GO.png" height="300" width="300"><br>
+                    You have Only 40 Moves To win The Game !!
+                <br>
+            <br>
+        <br>
+        <a href="memory.html" ><img src="Images/RPLAY.png" id="Hbtn"></a></div>
                 </div>
 
 
-               
+<!------------------------------- game functionality //Start, Restart, Sound , etc -------------------------- -->
                 <div class="memory-score">
-                    <div class="score"> </div>
-                    <br>
+                    <div class="score"></div>
                     <a href="./index.html">
                        <img src="Images/EB.jpg" class="back">
                     </a>
                     <br>
                     <br>
-                    <a href="./index.html">
-                        <img src="Images/Hbtn.png" id="Hbtn">
-                     </a>
-                </div>
+                    
+                       <img src="Images/Hbtn.png" id="Hbtn" onclick=" Displayopen()">
+                       <br>
+                       <br>   
+                      <a href="memory.html" ><img src="Images/RB.png" id="Hbtn"></a>
+                       <br>
+                       <img src="Images/S2.jpg" id="Sbtn" class="back" onclick=" toggleAudio()">
+                       
+                       <audio controls id="myAudio" src="Audios/Gana.mp3" type="audio/ogg" style="opacity: 0;" loop>
+               
+                        </audio>
+  <!-------------------------------How to play  Message Box start -------------------------- -->
+                     <div class="HowTPlay animate__animated animate__fadeInDown " id="Hbox">
+                        #STEP:1 To Play the game click on cards and rememebr the card type and click on other card for search the same card
+                        <br>
+                        <br>
+                        #STEP:2 If you found it then again clicks on both the card sequently 
+                        <br>
+                        <br>
+                        #STEP:3 repeat the same procees whenever all cards not maps with their pairs
+                        <br>
+                        <br>
+                        ⭐You Have only 40 Moves ! <br> <br>
+                        <button style="height: 30px; width: 120px; background-color: rgba(238, 70, 14, 0.793); color: wheat;" onclick=" Displayclose()">Close</button>
+                    </div>
+                    <div class="WinDisplay animate__animated animate__fadeInDown " id="Hbox">
+                        <br>
                 
+                        <center><img src="Images/WON.png" height="250" width="250" alt="wonpic">
+                        <br>
+                    <p id="Wtittle">You Won in 8 Poves</p>
+                <br><a href="memory.html" ><img src="Images/RPLAY.png" id="Hbtn"></a>
+            </center>
+                    </div>
+                </div>
+                 <!-------------------------------How to play  Message Box start By: Pankaj  -------------------------- -->
             </section>
          
            
         </main>
 
-        
+        <script>
+ // for control the open and close the dialog box ...................By:krishna Soni ..................               
+           function Displayopen(){
+            var a=document.getElementById("Hbox");
+            a.style.display="block";
+            
+            audio.pause();
+           }
+           function Displayclose(){
+       
+            var a=document.getElementById("Hbox");
+            a.style.display="none";
+            audio.play();
+
+           }
+ // for control the sound of game background .............By:Manya Goyal ........................   
+           const audio = document.getElementById("myAudio");
+           const button = document.getElementById("Sbtn");
+           window.onload = function () {
+            audio.play();
+        };
+
+function toggleAudio() {
+    if (audio.paused) {
+        audio.play();
+        button.src="Images/S2.jpg";
+    } else {
+        audio.pause();
+        button.src="Images/S1.jpg";
+    }
+}
+
+
+        </script>
         <script src="memory.js" type="text/javascript">
         </script>
     </body>
